@@ -29,8 +29,10 @@ class HttpMain(object):
             if(count==10):#只抓取100条
                 break
         writer.writer_htm()#将数据写入一个html中    
-main = HttpMain()
-main.main('http://baike.baidu.com/link?url=B4sod6A1rdbVwd660XmWeo6CbFnY-EvNKSfOEankVYCxsV1LSmgFw4rIrjzv6Q2WaF3gGFyzq_Lrc6KzKPycYq')     
+if __name__=='__main__':#如果不写这句话的话，import此模块同样会执行该函数，引入时__name__=模块名(http_main)，不引入时__name__main__
+    print (__name__)
+    main = HttpMain()
+    main.main('http://baike.baidu.com/link?url=B4sod6A1rdbVwd660XmWeo6CbFnY-EvNKSfOEankVYCxsV1LSmgFw4rIrjzv6Q2WaF3gGFyzq_Lrc6KzKPycYq')     
         
         
         
